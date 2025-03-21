@@ -10,5 +10,4 @@ wheels/
 .venv
 venv
 .env
-.git
 **/*.csv
