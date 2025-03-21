@@ -11,4 +11,4 @@ wheels/
 venv
 .env
 .git
-Suicide_Detection.csv
+**/*.csv
