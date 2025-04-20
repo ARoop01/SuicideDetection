@@ -4,24 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Chat</title>
+    <title>Supportive Chat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card mt-5">
-                    <div class="card-header bg-primary text-white">
-                        <h3 class="mb-0">Supportive Chat</h3>
-                    </div>
-                    <div class="card-body">
-                        <div id="chat-messages" class="chat-container mb-3"></div>
-                        <div class="input-group">
-                            <input type="text" id="message-input" class="form-control" placeholder="Type your message...">
-                            <button id="send-button" class="btn btn-primary">Send</button>
+    <div class="app-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <div class="chat-card">
+                        <div class="chat-header">
+                            <div class="header-left">
+                                <div class="avatar-container">
+                                    <div class="avatar support-avatar">
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div>
+                                    <h3>Supportive Chat</h3>
+                                    <p class="support-status">Online • Ready to help</p>
+                                </div>
+                            </div>
+                            <div class="header-actions">
+                                <button class="btn btn-sm btn-light" id="clear-chat" title="Clear chat history">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                                <button class="btn btn-sm btn-light" id="download-chat" title="Download chat history">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
                         </div>
+                        
+                        <div class="chat-body">
+                            <div id="chat-messages" class="chat-container"></div>
+                            
+                            <div class="accessibility-status" aria-live="polite" id="screen-reader-status">
+                                <!-- For screen readers -->
+                            </div>
+                        </div>
+                        
+                        <div class="chat-footer">
+                            <div class="input-group">
+                                <div class="input-wrapper">
+                                    <textarea id="message-input" class="form-control" placeholder="Type your message..." rows="1"></textarea>
+                                    <div class="emoji-button" id="emoji-trigger" title="Add emoji">
+                                        <i class="far fa-smile"></i>
+                                    </div>
+                                </div>
+                                <button id="send-button" class="btn btn-primary" aria-label="Send message">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <div class="chat-footer-info">
+                                <small class="text-muted">Your conversation is private and secure</small>
+                                <small class="text-muted" id="typing-status"></small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resources-section mt-4">
+                        <h5>Need immediate help?</h5>
+                        <div class="resource-links">
+                            <a href="tel:988" class="resource-link">
+                                <i class="fas fa-phone"></i>
+                                <span>988 Suicide & Crisis Lifeline</span>
+                            </a>
+                            <a href="https://www.crisistextline.org/" target="_blank" class="resource-link">
+                                <i class="fas fa-comment-alt"></i>
+                                <span>Crisis Text Line: Text HOME to 741741</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Emoji picker modal -->
+    <div class="modal fade" id="emoji-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Select an emoji</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="emoji-container">
+                        <!-- Common emojis will be populated by JavaScript -->
                     </div>
                 </div>
             </div>
