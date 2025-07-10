@@ -95,3 +95,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Mental health researchers and practitioners who provided guidance
 - Contributors of the datasets used for training and evaluation
 - Open source NLP and machine learning communities
+![Screenshot 2025-04-20 230135](https://github.com/user-attachments/assets/f394e364-2c1c-4872-a690-44d0e1bdbdce)
