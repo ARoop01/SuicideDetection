@@ -12,6 +12,10 @@ Suicide is a global public health concern. Early detection of suicidal thoughts 
 - Multiple classification models for suicide risk assessment
 - Performance evaluation metrics and comparison
 - User-friendly interface for real-time text analysis
+  ![Screenshot 2025-04-20 225738](https://github.com/user-attachments/assets/357ccaee-100a-4fdc-9d88-b400f7e18283)
+![Screenshot 2025-04-20 225706](https://github.com/user-attachments/assets/935285fc-c284-4dd8-be35-8214d141ae2c)
+
+![Screenshot 2025-04-20 225952](https://github.com/user-attachments/assets/b9096f55-70b1-4996-bceb-2c55ae51cae4)
 
 ## Dataset
 The system was trained on datasets containing:
@@ -69,6 +73,8 @@ Performance metrics on test data:(till 10 epochs,can achieve more accuaracy)
 - Precision: 80-88%
 - Recall: 82-90%
 - F1 Score: 81-89%
+  ![Screenshot 2025-04-20 230135](https://github.com/user-attachments/assets/08e12696-ff08-4487-8bf1-ac9f3438e29b)
+
 
 ## Ethical Considerations
 This tool is intended as a support system, not a replacement for professional mental health assessment. False positives and false negatives can occur. Always consult mental health professionals for proper diagnosis and treatment.
@@ -95,4 +101,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Mental health researchers and practitioners who provided guidance
 - Contributors of the datasets used for training and evaluation
 - Open source NLP and machine learning communities
-![Screenshot 2025-04-20 230135](https://github.com/user-attachments/assets/f394e364-2c1c-4872-a690-44d0e1bdbdce)
